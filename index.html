@@ -5,20 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Station</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:ital@1&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./develop/styles.css">
   </head>
   <body>
-    <main>
+
+    <main class="mainstage">
+
       <div class="card">
         <div class="search">
           <input type="text" placeholder="enter city name" spellcheck="false">
           <button><img src="/develop/images/search.png" alt="Search Icon"></button>
         </div>
-        <div class="Weather">
-            
-        </div>
 
+        <div class="weather">
+          <img src="/develop/images/clear.png" class="weather-icon">
+            <h1 class="temp">72°F</h1>
+            <h2 class="city">Orlando</h2>
+            <div class="details">
+              <div class="col">
+                <img src="develop/images/humidity.png" alt="humidity icon">
+                <div>
+                  <p class="humidity">60%</p>
+                  <p>humidity</p>
+                </div>
+              </div>
+                <div class="col">
+                  <img src="develop/images/wind.png" alt="wind icon">
+                  <div>
+                    <p class="wind">15mph</p>
+                    <p>Wind Speed</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+       </div>
+
+      <div class="forecastcard">
+        <div class="detailsforecast">
+          <div>
+            <p class="time">9:31 pm</p>
+          </div>
+          <div>
+            <p class="date"> 5/19/2023</p>
+          </div>
+        </div>
       </div>
+
 
 
 
