@@ -9,7 +9,7 @@ function setDate(){
     let d = new Date(); //getting a new date here which is the current one
     let thisDate = dayjs(d).format('dddd [The] DD[th] , MMM YYYY'); //formatting the date to be text
 
-//8. Setting The Current Date Into The Top Header       
+//Setting The Current Date Into The Top Header       
 todayEl.text(thisDate);
 
 }

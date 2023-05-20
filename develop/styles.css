@@ -123,12 +123,27 @@ body{
 }
 
 .fivedaycast ul{
+    border-radius: 2%;
+    width: 745px;
     list-style-type: none;
     padding-top: 15px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-content: center;
+    position: relative;
+    bottom: -15px;
     line-height: 80px;
+    
+}
+
+.fivedaycast li{
+    padding-left: 25px;
+    padding-top: 5px;
+    margin-top: 15px;
+    width: 745px;
+    background-color: #222;
+    border-radius: 8px;
 }
 
 .fivedaycast img{
