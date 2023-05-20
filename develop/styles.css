@@ -8,7 +8,22 @@
 
 body{
     background: #222;
+    background-image: url("");
 }
+
+.header1{
+    background: linear-gradient(135deg, #113366, #a49cd6);
+    color: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .mainstage{
     display:flex;
@@ -17,7 +32,7 @@ body{
 .card{
     width: 90% ;
     max-width: 470px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
+    background: linear-gradient(135deg, #113366, #a49cd6);
     color: #fff;
     margin: 100px auto 0;
     margin-left:5%;
@@ -87,7 +102,7 @@ body{
 .forecastcard{
     width: 90% ;
     max-width: 800px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
+    background: linear-gradient(135deg, #113366, #a49cd6);
     color: #fff;
     margin: 100px auto 0;
     margin-left:5%;
@@ -103,13 +118,19 @@ body{
     padding:0 20px;
 }
 
+.detailsforecast p{
+    opacity: 0.8;
+}
 
+.fivedaycast ul{
+    list-style-type: none;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 80px;
+}
 
-
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-  }
+.fivedaycast img{
+    width: 70px;
+}
