@@ -42,17 +42,17 @@ function defaultWeather(){
         let defaultCityHumidity = Math.floor(data.main.humidity);
         console.log("Current city is "+ defaultCityName);
 
-        if(data.weather[0].main == "Rain"){
-            $("#bigcard").attr("src", "/develop/images/rain.png")
-        } else if (data.weather[0].main == "Clear"){
-            $("#bigcard").attr("src", "/develop/images/clear.png")
-        } else if (data.weather[0].main == "Mist"){
-            $("#bigcard").attr("src", "/develop/images/mist.png")
-        } else if (data.weather[0].main == "Snow"){
-            $("#bigcard").attr("src", "/develop/images/snow.png")
-        } else if (data.weather[0].main == "Clouds"){
-            $("#bigcard").attr("src", "/develop/images/clouds.png")
-        }
+            if(data.weather[0].main == "Rain"){
+                $("#bigcard").attr("src", "/develop/images/rain.png")
+            } else if (data.weather[0].main == "Clear"){
+                $("#bigcard").attr("src", "/develop/images/clear.png")
+            } else if (data.weather[0].main == "Mist"){
+                $("#bigcard").attr("src", "/develop/images/mist.png")
+            } else if (data.weather[0].main == "Snow"){
+                $("#bigcard").attr("src", "/develop/images/snow.png")
+            } else if (data.weather[0].main == "Clouds"){
+                $("#bigcard").attr("src", "/develop/images/clouds.png")
+            } 
 
         $(".city").text(defaultCityName)
         $(".temp").text(defaultCityTemp+"°F")
@@ -61,6 +61,20 @@ function defaultWeather(){
 
     })
     
+    let forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?lat="+defaultLat+"&lon="+defaultLon+"&limit=5&appid="+ APIKey+"&units=imperial";
+    fetch(forecastUrl)
+.then(function(response){
+    return response.json();
+})
+
+.then(function(data){
+    let dayOne = data.list[1];
+    let dayTwo = data.list[9];
+    let dayThree = data.list[17];
+    let dayFour = data.list[25];
+    let dayFive = data.list[33];
+    console.log(dayOne);
+})
         };
           
         const errorCallback = (error) => {
@@ -73,11 +87,16 @@ function defaultWeather(){
 }
 
 
-//Area below sets a on click function to happen that will change all the weather info according to what city they will type in the search////////////////
+function getSearchCityWeather(){
+    //Area below sets a on click function to happen that will change all the weather info according to what city they will type in the search////////////////
 searchBtn.addEventListener("click", function(){
     let cityName = $("input").val();
     console.log(cityName);
     console.log("Getting Weather Details");
+
+    if(cityName == ''){
+        alert("Please Enter A Valid City Name");
+    }
 
 //geocoding the lat and long to just simplify it down///////////////////////////////////////////////////////
 let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"&limit=1&appid="+ APIKey+"&units=imperial";
@@ -139,14 +158,21 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
 })
 
 .then(function(data){
-    console.log(data)
+    let dayOne = data.list[1];
+    let dayTwo = data.list[9];
+    let dayThree = data.list[17];
+    let dayFour = data.list[25];
+    let dayFive = data.list[33];
+    console.log(dayOne);
 })
 });    
 })
 })
+}
 
 
 addEventListener("load",function(){
     defaultWeather();
+    getSearchCityWeather();
 });
 

@@ -21,9 +21,17 @@ body{
     padding-left: 35px;
     padding-right: 35px;
     display: flex;
-    justify-content: space-between;
-}
+    flex-wrap: wrap;
+    display: block;
+    flex-shrink: 2;
+    position: sticky;
+}   
 
+#currentDay{
+    position: relative;
+    left: 57.5%;
+    bottom: -65px;
+}
 
 .mainstage{
     display:flex;
@@ -104,7 +112,7 @@ body{
     max-width: 800px;
     background: linear-gradient(135deg, #113366, #a49cd6);
     color: #fff;
-    margin: 100px auto 0;
+    margin: 150px auto 0;
     margin-left:5%;
     border-radius: 20px;
     padding: 40px 35px;
@@ -141,7 +149,7 @@ body{
     padding-left: 25px;
     padding-top: 5px;
     margin-top: 15px;
-    width: 745px;
+    width: auto;
     background-color: #222;
     border-radius: 8px;
 }
@@ -149,3 +157,27 @@ body{
 .fivedaycast img{
     width: 70px;
 }
+
+@media screen and (max-width: 965px) {
+    .mainstage{
+        display: block;
+    }
+    .card{
+        position: relative;
+        bottom: -100px;
+        align-content: center;
+        margin: auto;
+    }
+
+    .forecastcard{
+        position: relative;
+        bottom: -125px;
+        width: 470px;
+        margin: auto;
+    }
+    #currentDay{
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }
+  }
