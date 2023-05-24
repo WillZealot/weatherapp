@@ -30,7 +30,7 @@ body{
 #currentDay{
     position: relative;
     left: 57.5%;
-    bottom: -65px;
+    bottom: 100px;
 }
 
 .mainstage{
@@ -43,7 +43,7 @@ body{
     background: linear-gradient(135deg, #113366, #a49cd6);
     color: #fff;
     margin: 100px auto 0;
-    margin-left:5%;
+    margin-left:2%;
     border-radius: 20px;
     padding: 40px 35px;
     text-align:center;
@@ -108,16 +108,32 @@ body{
     margin-top: 50px;
 }
 
+.recentlySearched{
+    background: linear-gradient(135deg, #113366, #a49cd6);
+    color: #fff;
+    max-height: 700px;
+    margin: 100px auto 0;
+    margin-left:2%;
+    border-radius: 20px;
+    padding: 40px 35px;
+}
+
+
+
+
 .forecastcard{
     width: 90% ;
     max-width: 800px;
     background: linear-gradient(135deg, #113366, #a49cd6);
     color: #fff;
     margin: 150px auto 0;
-    margin-left:5%;
+    margin-left:2%;
     border-radius: 20px;
     padding: 40px 35px;
     display: flex;
+    position: relative;
+    bottom: 50px;
+    max-height: 700px;
 }
 
 .detailsforecast{
@@ -135,14 +151,14 @@ body{
     border-radius: 2%;
     width: 745px;
     list-style-type: none;
-    padding-top: 15px;
+    padding-top: 5px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     position: relative;
     bottom: -15px;
-    line-height: 80px;
+    line-height: 20px;
     
 }
 
@@ -157,11 +173,13 @@ body{
 
 .forecastDay{
     display: flex;
+    position: relative;
+    bottom: 13px;
 }
 
 
 #forecastWeatherIconOne,#forecastWeatherIconTwo,#forecastWeatherIconThree,#forecastWeatherIconFour,#forecastWeatherIconFive {
-    width: 15%;
+    width: 12%;
     position: relative;
     bottom:-5px;
     left:25px;
