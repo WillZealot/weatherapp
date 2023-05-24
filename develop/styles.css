@@ -108,19 +108,6 @@ body{
     margin-top: 50px;
 }
 
-.recentlySearched{
-    background: linear-gradient(135deg, #113366, #a49cd6);
-    color: #fff;
-    max-height: 700px;
-    margin: 100px auto 0;
-    margin-left:2%;
-    border-radius: 20px;
-    padding: 40px 35px;
-}
-
-
-
-
 .forecastcard{
     width: 90% ;
     max-width: 800px;
@@ -177,6 +164,10 @@ body{
     bottom: 13px;
 }
 
+#forecastDateOne,#forecastDateTwo,#forecastDateThree,#forecastDateFour,#forecastDateFive{
+    font-size: 25px;
+}
+
 
 #forecastWeatherIconOne,#forecastWeatherIconTwo,#forecastWeatherIconThree,#forecastWeatherIconFour,#forecastWeatherIconFive {
     width: 12%;
@@ -209,6 +200,19 @@ body{
     right: -110px;
 }
 
+.recentlySearched{
+    background: linear-gradient(135deg, #113366, #a49cd6);
+    color: #fff;
+    max-height: 700px;
+    margin: 100px auto 0;
+    margin-left:2%;
+    border-radius: 20px;
+    padding: 40px 35px;
+}
+
+.recentlySearched h2{
+    text-decoration: underline;
+}
 
 @media screen and (max-width: 965px) {
     .mainstage{
