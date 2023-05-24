@@ -160,7 +160,7 @@ body{
 }
 
 
-#forecastWeatherIcon{
+#forecastWeatherIconOne,#forecastWeatherIconTwo,#forecastWeatherIconThree,#forecastWeatherIconFour,#forecastWeatherIconFive {
     width: 15%;
     position: relative;
     bottom:-5px;
@@ -188,7 +188,7 @@ body{
 #forecastWindOne,#forecastWindTwo,#forecastWindThree,#forecastWindFour,#forecastWindFive{
     position: relative;
     bottom: -22px;
-    right: -150px;
+    right: -110px;
 }
 
 
