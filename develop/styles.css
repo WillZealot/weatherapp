@@ -200,7 +200,7 @@ body{
     right: -110px;
 }
 
-.recentlySearched{
+.recentlySearchedCard{
     background: linear-gradient(135deg, #113366, #a49cd6);
     color: #fff;
     max-height: 700px;
@@ -210,7 +210,7 @@ body{
     padding: 40px 35px;
 }
 
-.recentlySearched h2{
+.recentlySearchedCard h2{
     text-decoration: underline;
 }
 

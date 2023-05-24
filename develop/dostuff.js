@@ -13,7 +13,7 @@ todayEl.text(thisDate);
 }
 setDate();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+let recentList = $("#recentlySearchedList");
 
 let APIKey = `b063e961132d34721eb67544bf97f624`;
 
