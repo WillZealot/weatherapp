@@ -66,14 +66,44 @@ function defaultWeather(){
 .then(function(response){
     return response.json();
 })
-
+///////////////////////////////////////Current City Forecast details Are below////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .then(function(data){
+
     let dayOne = data.list[1];
+    let dayOneDate = dayOne.dt_txt.split(' ')[0];
+    let dayOneTemp = Math.floor(dayOne.main.temp);
+    let dayOneHumidity = Math.floor(dayOne.main.humidity);
+    let dayOneWind = Math.floor(dayOne.wind.speed);
+    console.log(dayOneDate + " " + dayOneTemp + "F " + dayOneHumidity + "% " + dayOneWind + "Mph");
+    
     let dayTwo = data.list[9];
+    let dayTwoDate = dayTwo.dt_txt.split(' ')[0];
+    let dayTwoTemp = Math.floor(dayTwo.main.temp);
+    let dayTwoHumidity = Math.floor(dayTwo.main.humidity);
+    let dayTwoWind = Math.floor(dayTwo.wind.speed);
+    console.log(dayTwoDate + " " + dayTwoTemp + "F " + dayTwoHumidity + "% " + dayTwoWind + "Mph");
+ 
     let dayThree = data.list[17];
+    let dayThreeDate = dayThree.dt_txt.split(' ')[0];
+    let dayThreeTemp = Math.floor(dayThree.main.temp);
+    let dayThreeHumidity = Math.floor(dayThree.main.humidity);
+    let dayThreeWind = Math.floor(dayThree.wind.speed);
+    console.log(dayThreeDate + " " + dayThreeTemp + "F " + dayThreeHumidity + "% " + dayThreeWind + "Mph");
+
     let dayFour = data.list[25];
+    let dayFourDate = dayFour.dt_txt.split(' ')[0];
+    let dayFourTemp = Math.floor(dayFour.main.temp);
+    let dayFourHumidity = Math.floor(dayFour.main.humidity);
+    let dayFourWind = Math.floor(dayFour.wind.speed);
+    console.log(dayFourDate + " " + dayFourTemp + "F " + dayFourHumidity + "% " + dayFourWind + "Mph");
+
     let dayFive = data.list[33];
-    console.log(dayOne);
+    let dayFiveDate = dayFive.dt_txt.split(' ')[0];
+    let dayFiveTemp = Math.floor(dayFive.main.temp);
+    let dayFiveHumidity = Math.floor(dayFive.main.humidity);
+    let dayFiveWind = Math.floor(dayFive.wind.speed);
+    console.log(dayFiveDate + " " + dayFiveTemp + "F " + dayFiveHumidity + "% " + dayFiveWind + "Mph");
+
 })
         };
           
@@ -156,7 +186,7 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
 .then(function(response){
     return response.json();
 })
-
+////////////////////////////searched city forecast will be here////////////////////////////////////////////////////////////////////////////////
 .then(function(data){
     let dayOne = data.list[1];
     let dayTwo = data.list[9];
