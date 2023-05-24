@@ -47,6 +47,7 @@ body{
     border-radius: 20px;
     padding: 40px 35px;
     text-align:center;
+    max-height: 700px;
 }
 
 .search{
@@ -158,38 +159,36 @@ body{
     display: flex;
 }
 
-#forecastWeatherIconOne, #forecastWeatherIconTwo, #forecastWeatherIconThree ,#forecastWeatherIconFour ,#forecastWeatherIconFive {
-    width: 30%;
-}
 
-#forecastHumidityIcon{
-    width:30%;
+#forecastWeatherIcon{
+    width: 15%;
     position: relative;
-    bottom: 25px;
+    bottom:-5px;
+    left:25px;
 }
 
 #forecastWindIcon{
     width: 23%;
     position:relative;
-    bottom: 14px;
+    bottom: -11px;
 }
 
 #forecastTempOne,#forecastTempTwo,#forecastTempThree,#forecastTempFour,#forecastTempFive{
     position: relative;
-    bottom: -5px;
     left: 15px;
+    bottom: -25px;
 }
 
 #forecastHumidityOne,#forecastHumidityTwo,#forecastHumidityThree,#forecastHumidityFour,#forecastHumidityFive{
     position: relative;
-    bottom: -35px;
-    right: 70px ;
+    bottom: -25px;
+    right: -70px ;
 }
 
 #forecastWindOne,#forecastWindTwo,#forecastWindThree,#forecastWindFour,#forecastWindFive{
     position: relative;
-    bottom: -35px;
-    right: 70px;
+    bottom: -22px;
+    right: -150px;
 }
 
 

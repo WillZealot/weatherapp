@@ -74,21 +74,69 @@ function defaultWeather(){
     let dayOneTemp = Math.floor(dayOne.main.temp);
     let dayOneHumidity = Math.floor(dayOne.main.humidity);
     let dayOneWind = Math.floor(dayOne.wind.speed);
-    console.log(dayOneDate + " " + dayOneTemp + "F " + dayOneHumidity + "% " + dayOneWind + "Mph");
-    
+    console.log(dayOne);
+    $("#forecastDateOne").text(dayOneDate);
+    $("#forecastTempOne").text(dayOneTemp + " °F");
+    $("#forecastHumidityOne").text(dayOneHumidity + "% Humidity");
+    $("#forecastWindOne").text(dayOneWind + "MPH Wind");
+    if(data.list[0].weather[0].main == "Rain"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png")
+    } else if (data.list[0].weather[0].main == "Clear"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png")
+    } else if (data.list[0].weather[0].main == "Mist"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png")
+    } else if (data.list[0].weather[0].main == "Snow"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png")
+    } else if (data.list[0].weather[0].main == "Clouds"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png")
+    } 
+
+
+
     let dayTwo = data.list[9];
     let dayTwoDate = dayTwo.dt_txt.split(' ')[0];
     let dayTwoTemp = Math.floor(dayTwo.main.temp);
     let dayTwoHumidity = Math.floor(dayTwo.main.humidity);
     let dayTwoWind = Math.floor(dayTwo.wind.speed);
     console.log(dayTwoDate + " " + dayTwoTemp + "F " + dayTwoHumidity + "% " + dayTwoWind + "Mph");
- 
+    $("#forecastDateTwo").text(dayTwoDate);
+    $("#forecastTempTwo").text(dayTwoTemp + " °F");
+    $("#forecastHumidityTwo").text(dayTwoHumidity + "% Humidity");
+    $("#forecastWindTwo").text(dayTwoWind + "MPH Wind");
+    if(data.list[9].weather[0].main == "Rain"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png")
+    } else if (data.list[9].weather[0].main == "Clear"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png")
+    } else if (data.list[9].weather[0].main == "Mist"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png")
+    } else if (data.list[9].weather[0].main == "Snow"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png")
+    } else if (data.list[9].weather[0].main == "Clouds"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png")
+    } 
+
     let dayThree = data.list[17];
     let dayThreeDate = dayThree.dt_txt.split(' ')[0];
     let dayThreeTemp = Math.floor(dayThree.main.temp);
     let dayThreeHumidity = Math.floor(dayThree.main.humidity);
     let dayThreeWind = Math.floor(dayThree.wind.speed);
     console.log(dayThreeDate + " " + dayThreeTemp + "F " + dayThreeHumidity + "% " + dayThreeWind + "Mph");
+    $("#forecastDateThree").text(dayThreeDate);
+    $("#forecastTempThree").text(dayThreeTemp + " °F");
+    $("#forecastHumidityThree").text(dayThreeHumidity + "% Humidity");
+    $("#forecastWindThree").text(dayThreeWind + "MPH Wind");
+    if(data.list[17].weather[0].main == "Rain"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png")
+    } else if (data.list[17].weather[0].main == "Clear"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png")
+    } else if (data.list[17].weather[0].main == "Mist"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png")
+    } else if (data.list[17].weather[0].main == "Snow"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png")
+    } else if (data.list[17].weather[0].main == "Clouds"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png")
+    } 
+
 
     let dayFour = data.list[25];
     let dayFourDate = dayFour.dt_txt.split(' ')[0];
@@ -96,6 +144,21 @@ function defaultWeather(){
     let dayFourHumidity = Math.floor(dayFour.main.humidity);
     let dayFourWind = Math.floor(dayFour.wind.speed);
     console.log(dayFourDate + " " + dayFourTemp + "F " + dayFourHumidity + "% " + dayFourWind + "Mph");
+    $("#forecastDateFour").text(dayFourDate);
+    $("#forecastTempFour").text(dayFourTemp + " °F");
+    $("#forecastHumidityFour").text(dayFourHumidity + "% Humidity");
+    $("#forecastWindFour").text(dayFourWind + "MPH Wind");
+    if (data.list[25].weather[0].main == "Rain") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png");
+    } else if (data.list[25].weather[0].main == "Clear") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png");
+    } else if (data.list[25].weather[0].main == "Mist") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png");
+    } else if (data.list[25].weather[0].main == "Snow") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png");
+    } else if (data.list[25].weather[0].main == "Clouds") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png");
+    }
 
     let dayFive = data.list[33];
     let dayFiveDate = dayFive.dt_txt.split(' ')[0];
@@ -103,6 +166,21 @@ function defaultWeather(){
     let dayFiveHumidity = Math.floor(dayFive.main.humidity);
     let dayFiveWind = Math.floor(dayFive.wind.speed);
     console.log(dayFiveDate + " " + dayFiveTemp + "F " + dayFiveHumidity + "% " + dayFiveWind + "Mph");
+    $("#forecastDateFive").text(dayFiveDate);
+    $("#forecastTempFive").text(dayFiveTemp + " °F");
+    $("#forecastHumidityFive").text(dayFiveHumidity + "% Humidity");
+    $("#forecastWindFive").text(dayFiveWind + "MPH Wind");
+    if (data.list[33].weather[0].main == "Rain") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png");
+    } else if (data.list[33].weather[0].main == "Clear") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png");
+    } else if (data.list[33].weather[0].main == "Mist") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png");
+    } else if (data.list[33].weather[0].main == "Snow") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png");
+    } else if (data.list[33].weather[0].main == "Clouds") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png");
+}
 
 })
         };
@@ -159,9 +237,9 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     let cityHumidity = Math.floor(data.main.humidity);
 
     $(".city").text(cityName);
-    $(".temp").text(cityTemp+"°F")
-    $(".wind").text(cityWind+" Mph")
-    $(".Humidity").text(cityHumidity+"%")
+    $(".temp").text(cityTemp+"°F");
+    $(".wind").text(cityWind+" Mph");
+    $(".Humidity").text(cityHumidity+"%");
 
     console.log(cityTemp + "° Farenheight");
     console.log(cityHumidity + "% Humidity");
@@ -195,6 +273,21 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     let dayOneHumidity = Math.floor(dayOne.main.humidity);
     let dayOneWind = Math.floor(dayOne.wind.speed);
     console.log(dayOneDate + " " + dayOneTemp + "F " + dayOneHumidity + "% " + dayOneWind + "Mph");
+    $("#forecastDateOne").text(dayOneDate);
+    $("#forecastTempOne").text(dayOneTemp + " °F");
+    $("#forecastHumidityOne").text(dayOneHumidity + "% Humidity");
+    $("#forecastWindOne").text(dayOneWind + "MPH Wind");
+    if(data.list[1].weather[0].main == "Rain"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png")
+    } else if (data.list[1].weather[0].main == "Clear"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png")
+    } else if (data.list[1].weather[0].main == "Mist"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png")
+    } else if (data.list[1].weather[0].main == "Snow"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png")
+    } else if (data.list[1].weather[0].main == "Clouds"){
+        $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png")
+    } 
     
     let dayTwo = data.list[9];
     let dayTwoDate = dayTwo.dt_txt.split(' ')[0];
@@ -202,6 +295,21 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     let dayTwoHumidity = Math.floor(dayTwo.main.humidity);
     let dayTwoWind = Math.floor(dayTwo.wind.speed);
     console.log(dayTwoDate + " " + dayTwoTemp + "F " + dayTwoHumidity + "% " + dayTwoWind + "Mph");
+    $("#forecastDateTwo").text(dayTwoDate);
+    $("#forecastTempTwo").text(dayTwoTemp + " °F");
+    $("#forecastHumidityTwo").text(dayTwoHumidity + "% Humidity");
+    $("#forecastWindTwo").text(dayTwoWind + " MPH Wind");
+    if (data.list[9].weather[0].main == "Rain") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png");
+    } else if (data.list[9].weather[0].main == "Clear") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png");
+    } else if (data.list[9].weather[0].main == "Mist") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png");
+    } else if (data.list[9].weather[0].main == "Snow") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png");
+    } else if (data.list[9].weather[0].main == "Clouds") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png");
+    }
  
     let dayThree = data.list[17];
     let dayThreeDate = dayThree.dt_txt.split(' ')[0];
@@ -209,6 +317,21 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     let dayThreeHumidity = Math.floor(dayThree.main.humidity);
     let dayThreeWind = Math.floor(dayThree.wind.speed);
     console.log(dayThreeDate + " " + dayThreeTemp + "F " + dayThreeHumidity + "% " + dayThreeWind + "Mph");
+    $("#forecastDateThree").text(dayThreeDate);
+    $("#forecastTempThree").text(dayThreeTemp + " °F");
+    $("#forecastHumidityThree").text(dayThreeHumidity + "% Humidity");
+    $("#forecastWindThree").text(dayThreeWind + " MPH Wind");
+    if (data.list[17].weather[0].main == "Rain") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png");
+    } else if (data.list[17].weather[0].main == "Clear") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png");
+    } else if (data.list[17].weather[0].main == "Mist") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png");
+    } else if (data.list[17].weather[0].main == "Snow") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png");
+    } else if (data.list[17].weather[0].main == "Clouds") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png");
+    }
 
     let dayFour = data.list[25];
     let dayFourDate = dayFour.dt_txt.split(' ')[0];
@@ -216,6 +339,22 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     let dayFourHumidity = Math.floor(dayFour.main.humidity);
     let dayFourWind = Math.floor(dayFour.wind.speed);
     console.log(dayFourDate + " " + dayFourTemp + "F " + dayFourHumidity + "% " + dayFourWind + "Mph");
+    $("#forecastDateFour").text(dayFourDate);
+    $("#forecastTempFour").text(dayFourTemp + " °F");
+    $("#forecastHumidityFour").text(dayFourHumidity + "% Humidity");
+    $("#forecastWindFour").text(dayFourWind + " MPH Wind");
+    if (data.list[25].weather[0].main == "Rain") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png");
+    } else if (data.list[25].weather[0].main == "Clear") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png");
+    } else if (data.list[25].weather[0].main == "Mist") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png");
+    } else if (data.list[25].weather[0].main == "Snow") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png");
+    } else if (data.list[25].weather[0].main == "Clouds") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png");
+    }
+
 
     let dayFive = data.list[33];
     let dayFiveDate = dayFive.dt_txt.split(' ')[0];
@@ -223,6 +362,21 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     let dayFiveHumidity = Math.floor(dayFive.main.humidity);
     let dayFiveWind = Math.floor(dayFive.wind.speed);
     console.log(dayFiveDate + " " + dayFiveTemp + "F " + dayFiveHumidity + "% " + dayFiveWind + "Mph");
+    $("#forecastDateFive").text(dayFiveDate);
+    $("#forecastTempFive").text(dayFiveTemp + " °F");
+    $("#forecastHumidityFive").text(dayFiveHumidity + "% Humidity");
+    $("#forecastWindFive").text(dayFiveWind + " MPH Wind");
+    if (data.list[33].weather[0].main == "Rain") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/rain.png");
+    } else if (data.list[33].weather[0].main == "Clear") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clear.png");
+    } else if (data.list[33].weather[0].main == "Mist") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/mist.png");
+    } else if (data.list[33].weather[0].main == "Snow") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/snow.png");
+    } else if (data.list[33].weather[0].main == "Clouds") {
+    $("#forecastWeatherIcon").attr("src", "/develop/images/clouds.png");
+}
 })
 });    
 })
