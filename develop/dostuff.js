@@ -11,6 +11,7 @@ function setDate(){
 todayEl.text(thisDate);
 
 }
+// Set the current date in the header
 setDate();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 let recentList = $("#recentlySearchedList");
@@ -19,26 +20,29 @@ let APIKey = `b063e961132d34721eb67544bf97f624`;
 
 let searchBtn = document.querySelector("#searchBtn");
 let citySearch = document.querySelector(".search");
-////area down below right here gets the users current geographical location and it sets that main card to show them a default weather status of their own city
+
+// Function to display default weather based on the user's current location
 function defaultWeather(){
     const successCallback = (position) => {
         let defaultLat = position.coords.latitude;
         let defaultLon = position.coords.longitude;
-
+// Fetch the current weather data for the default location
         let currentUrl = "https://api.openweathermap.org/data/2.5/weather?lat="+defaultLat+"&lon="+defaultLon+"&appid="+ APIKey+"&units=imperial";
 
-
+// Fetch the current weather data
         fetch(currentUrl)
     .then(function(response){
         return response.json();
     })
     
     .then(function(data){
+// Extract the necessary weather information
         let defaultCityName = data.name;
         let defaultCityTemp = Math.floor(data.main.temp);
         let defaultCityWind = Math.floor(data.wind.speed);
         let defaultCityHumidity = Math.floor(data.main.humidity);
 
+        // Set the weather icon based on the weather condition
             if(data.weather[0].main == "Rain"){
                 $("#bigcard").attr("src", "/develop/images/rain.png")
             } else if (data.weather[0].main == "Clear"){
@@ -52,14 +56,14 @@ function defaultWeather(){
             } else {
                 return;
             }
-
+        // Update the weather information in the UI
         $(".city").text(defaultCityName)
         $(".temp").text(defaultCityTemp+"°F")
         $(".wind").text(defaultCityWind+" Mph")
         $(".Humidity").text(defaultCityHumidity+"%")
 
     })
-    
+ // Fetch the forecast weather data for the default location   
     let forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?lat="+defaultLat+"&lon="+defaultLon+"&limit=5&appid="+ APIKey+"&units=imperial";
     fetch(forecastUrl)
 .then(function(response){
@@ -67,6 +71,7 @@ function defaultWeather(){
 })
 ///////////////////////////////////////Current City Forecast details Are below////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .then(function(data){
+  // Extract and display the forecast details for each day
 
     let dayOne = data.list[1];
     let dayOneDate = dayOne.dt_txt.split(' ')[0];
@@ -78,7 +83,7 @@ function defaultWeather(){
     $("#forecastTempOne").text(dayOneTemp + " °F");
     $("#forecastHumidityOne").text(dayOneHumidity + "% Humidity");
     $("#forecastWindOne").text(dayOneWind + " MPH Wind");
-    
+    //setting weather icon looks like this
     if (dayOne.weather[0].main == "Rain") {
       $("#forecastWeatherIconOne").attr("src", "/develop/images/rain.png");
     } else if (dayOne.weather[0].main == "Clear") {
@@ -185,11 +190,11 @@ function defaultWeather(){
 
 })
         };
-          
+      // Error callback for retrieving the user's current location    
         const errorCallback = (error) => {
         console.log(error);
         };
-          
+      // Retrieve the user's current location    
         navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
 
@@ -452,7 +457,7 @@ function displayButtonCity() {
     let CityName = $(this).text();
     
 
-//geocoding the lat and long to just simplify it down///////////////////////////////////////////////////////
+//geocoding the name on the button
 let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"&limit=1&appid="+ APIKey+"&units=imperial";
 
     fetch(cityNameUrl)
@@ -468,7 +473,7 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     }
 
     let cityLon = data[0]?.lon;
-//current weather url fetch here///////////////////////////////////////////////////////////////////////////////
+//button press city sets the cards info
     let currentUrl = "https://api.openweathermap.org/data/2.5/weather?lat="+cityLat+"&lon="+cityLon+"&appid="+ APIKey+"&units=imperial";
 
     fetch(currentUrl)
@@ -501,13 +506,13 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     }
 
 
-//forecast url fetch is here///////////////////////////////////////////////////////////////////////////////////////
+//fetching info for the name on the button
     let forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?lat="+cityLat+"&lon="+cityLon+"&limit=5&appid="+ APIKey+"&units=imperial";
     fetch(forecastUrl)
 .then(function(response){
     return response.json();
 })
-////////////////////////////searched city forecast will be here////////////////////////////////////////////////////////////////////////////////
+// button pressed weather info starts here
 .then(function(data){
 
     let dayOne = data.list[1];
@@ -631,9 +636,13 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
 }
 
 window.addEventListener("load",function(){
+  // Call the defaultWeather function to display default weather
     defaultWeather();
+    // Call the buttons that are in storage
     displayRecents();
+    // Call tht gets the weather of the city that was searched
     getSearchCityWeather();
+    // Call changes the weather information to what the name is on the button
     displayButtonCity();
 });
 
