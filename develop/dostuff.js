@@ -22,7 +22,6 @@ let citySearch = document.querySelector(".search");
 ////area down below right here gets the users current geographical location and it sets that main card to show them a default weather status of their own city
 function defaultWeather(){
     const successCallback = (position) => {
-        console.log(position);
         let defaultLat = position.coords.latitude;
         let defaultLon = position.coords.longitude;
 
@@ -35,12 +34,10 @@ function defaultWeather(){
     })
     
     .then(function(data){
-        console.log(data)
         let defaultCityName = data.name;
         let defaultCityTemp = Math.floor(data.main.temp);
         let defaultCityWind = Math.floor(data.wind.speed);
         let defaultCityHumidity = Math.floor(data.main.humidity);
-        console.log("Current city is "+ defaultCityName);
 
             if(data.weather[0].main == "Rain"){
                 $("#bigcard").attr("src", "/develop/images/rain.png")
@@ -203,8 +200,6 @@ function getSearchCityWeather(){
     //Area below sets a on click function to happen that will change all the weather info according to what city they will type in the search////////////////
 searchBtn.addEventListener("click", function(){
     let cityName = $("input").val();
-    console.log(cityName);
-    console.log("Getting Weather Details");
     
 
 //geocoding the lat and long to just simplify it down///////////////////////////////////////////////////////
@@ -216,7 +211,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
 })
 
 .then(function(data){
-    console.log(data)
     let cityLat = data[0]?.lat;
     if (!cityLat) {
         alert("Please enter a valid city name.");
@@ -224,8 +218,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     }
 
     let cityLon = data[0]?.lon;
-    console.log(cityLat);
-    console.log(cityLon);
 //current weather url fetch here///////////////////////////////////////////////////////////////////////////////
     let currentUrl = "https://api.openweathermap.org/data/2.5/weather?lat="+cityLat+"&lon="+cityLon+"&appid="+ APIKey+"&units=imperial";
 
@@ -235,8 +227,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
 })
 
 .then(function(data){
-    console.log(data);
-    console.log("Current "+ cityName + " Weather" );
     let cityTemp = Math.floor(data.main.temp);
     let cityWind = Math.floor(data.wind.speed);
     let cityHumidity = Math.floor(data.main.humidity);
@@ -245,10 +235,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     $(".temp").text(cityTemp+"°F");
     $(".wind").text(cityWind+" Mph");
     $(".Humidity").text(cityHumidity+"%");
-
-    console.log(cityTemp + "° Farenheight");
-    console.log(cityHumidity + "% Humidity");
-    console.log(cityWind + " Mph Winds");
 
     if(data.weather[0].main == "Rain"){
         $("#bigcard").attr("src", "/develop/images/rain.png")
@@ -319,7 +305,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
 
 
 
-    console.log("getting forecast details for the city that was searched");
     let dayOne = data.list[1];
     let dayOneDate = dayOne.dt_txt.split(' ')[0];
     let dayOneTemp = Math.floor(dayOne.main.temp);
@@ -434,12 +419,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     } else if (dayFive.weather[0].main == "Clouds") {
       $("#forecastWeatherIconFive").attr("src", "/develop/images/clouds.png");
     }
-
-    console.log(dayOne);
-    console.log(dayTwo);
-    console.log(dayThree);
-    console.log(dayFour);
-    console.log(dayFive);
 })
 });    
 })
@@ -471,9 +450,6 @@ for (let i = 0; i < buttonsData.length; i++) {
 function displayButtonCity() {
   $(".city-buttons").click(function() {
     let CityName = $(this).text();
-
-    console.log(CityName);
-    console.log("Getting Weather Details");
     
 
 //geocoding the lat and long to just simplify it down///////////////////////////////////////////////////////
@@ -485,7 +461,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
 })
 
 .then(function(data){
-    console.log(data)
     let cityLat = data[0]?.lat;
     if (!cityLat) {
         alert("Please enter a valid city name.");
@@ -493,8 +468,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     }
 
     let cityLon = data[0]?.lon;
-    console.log(cityLat);
-    console.log(cityLon);
 //current weather url fetch here///////////////////////////////////////////////////////////////////////////////
     let currentUrl = "https://api.openweathermap.org/data/2.5/weather?lat="+cityLat+"&lon="+cityLon+"&appid="+ APIKey+"&units=imperial";
 
@@ -504,8 +477,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
 })
 
 .then(function(data){
-    console.log(data);
-    console.log("Current "+ CityName + " Weather" );
     let cityTemp = Math.floor(data.main.temp);
     let cityWind = Math.floor(data.wind.speed);
     let cityHumidity = Math.floor(data.main.humidity);
@@ -514,10 +485,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     $(".temp").text(cityTemp+"°F");
     $(".wind").text(cityWind+" Mph");
     $(".Humidity").text(cityHumidity+"%");
-
-    console.log(cityTemp + "° Farenheight");
-    console.log(cityHumidity + "% Humidity");
-    console.log(cityWind + " Mph Winds");
 
     if(data.weather[0].main == "Rain"){
         $("#bigcard").attr("src", "/develop/images/rain.png")
@@ -543,7 +510,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
 ////////////////////////////searched city forecast will be here////////////////////////////////////////////////////////////////////////////////
 .then(function(data){
 
-    console.log("getting forecast details for the city that was searched");
     let dayOne = data.list[1];
     let dayOneDate = dayOne.dt_txt.split(' ')[0];
     let dayOneTemp = Math.floor(dayOne.main.temp);
@@ -658,12 +624,6 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     } else if (dayFive.weather[0].main == "Clouds") {
       $("#forecastWeatherIconFive").attr("src", "/develop/images/clouds.png");
     }
-
-    console.log(dayOne);
-    console.log(dayTwo);
-    console.log(dayThree);
-    console.log(dayFour);
-    console.log(dayFive);
 })
 });    
 })
