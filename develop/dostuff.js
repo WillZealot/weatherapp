@@ -3,7 +3,7 @@ let localeSettingsEl = {};
   dayjs.locale(localeSettingsEl);
 
 function setDate(){
-    let todayEl = $('#currentDay'); //Im setting the variable to the id that contains the text area
+    let todayEl = $('#currentDay'); //Im setting the letiable to the id that contains the text area
     let d = new Date(); //getting a new date here which is the current one
     let thisDate = dayjs(d).format('dddd [The] DD[th] , MMM YYYY'); //formatting the date to be text
 
@@ -205,6 +205,7 @@ searchBtn.addEventListener("click", function(){
     let cityName = $("input").val();
     console.log(cityName);
     console.log("Getting Weather Details");
+    
 
 //geocoding the lat and long to just simplify it down///////////////////////////////////////////////////////
 let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"&limit=1&appid="+ APIKey+"&units=imperial";
@@ -221,6 +222,7 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
         alert("Please enter a valid city name.");
         return;
     }
+
     let cityLon = data[0]?.lon;
     console.log(cityLat);
     console.log(cityLon);
@@ -271,6 +273,52 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
 })
 ////////////////////////////searched city forecast will be here////////////////////////////////////////////////////////////////////////////////
 .then(function(data){
+
+  if (cityLat) {
+    let cityName = $("input").val(); // Get the input value
+    
+  // Check if a button with the same cityName already exists
+  let existingButton = $(".city-buttons").filter(function () {
+    return $(this).text() === cityName;
+  });
+
+  if (existingButton.length > 0) {
+    return;
+  }
+
+
+
+
+    // Create a button element
+    let button = $("<button></button>");
+    button.text(cityName); // Set the button text to the input value
+    button.click(getSearchCityWeather);
+  
+    // Set the ID attribute of the button
+    let buttonId = "recentlySearchedButton_" + cityName;
+    button.attr("id", buttonId);
+  
+    // Add class to the button
+    button.addClass("city-buttons");
+  
+    // Append the button to the 'recentlySearchedList' element
+    recentList.append(button);
+  
+    // Store button information in local storage
+    let buttonsData = JSON.parse(localStorage.getItem("recentlySearchedButtons")) || [];
+     // Limit the number of stored buttons to 9
+    if (buttonsData.length >= 9) {
+    // Remove the oldest button from both the DOM and the buttonsData array
+    let oldestButtonId = buttonsData.shift().id;
+      $("#" + oldestButtonId).remove();
+    }
+
+    buttonsData.push({ id: buttonId, cityName: cityName });
+    localStorage.setItem("recentlySearchedButtons", JSON.stringify(buttonsData));
+  }
+
+
+
     console.log("getting forecast details for the city that was searched");
     let dayOne = data.list[1];
     let dayOneDate = dayOne.dt_txt.split(' ')[0];
@@ -398,9 +446,33 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
 })
 }
 
+function displayRecents(){
+  let buttonsData = JSON.parse(localStorage.getItem("recentlySearchedButtons")) || [];
+
+// Iterate over the button data and recreate the buttons
+for (let i = 0; i < buttonsData.length; i++) {
+  let buttonInfo = buttonsData[i];
+  let buttonId = buttonInfo.id;
+  let cityName = buttonInfo.cityName;
+
+  // Create a button element
+  let button = $("<button></button>");
+  button.attr("id", buttonId);
+  button.text(cityName);
+  button.click(getSearchCityWeather);
+  button.addClass("city-buttons");
+
+  // Append the button to the 'recentlySearchedList' element
+  recentList.append(button);
+}
+}
+
+
 
 addEventListener("load",function(){
     defaultWeather();
+    displayRecents();
     getSearchCityWeather();
 });
+
 
