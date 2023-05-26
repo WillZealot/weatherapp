@@ -44,15 +44,15 @@ function defaultWeather(){
 
         // Set the weather icon based on the weather condition
             if(data.weather[0].main == "Rain"){
-                $("#bigcard").attr("src", "/develop/images/rain.png")
+                $("#bigcard").attr("src", "./develop/images/rain.png")
             } else if (data.weather[0].main == "Clear"){
-                $("#bigcard").attr("src", "/develop/images/clear.png")
+                $("#bigcard").attr("src", "./develop/images/clear.png")
             } else if (data.weather[0].main == "Mist"){
-                $("#bigcard").attr("src", "/develop/images/mist.png")
+                $("#bigcard").attr("src", "./develop/images/mist.png")
             } else if (data.weather[0].main == "Snow"){
-                $("#bigcard").attr("src", "/develop/images/snow.png")
+                $("#bigcard").attr("src", "./develop/images/snow.png")
             } else if (data.weather[0].main == "Clouds"){
-                $("#bigcard").attr("src", "/develop/images/clouds.png")
+                $("#bigcard").attr("src", "./develop/images/clouds.png")
             } else {
                 return;
             }
@@ -85,15 +85,15 @@ function defaultWeather(){
     $("#forecastWindOne").text(dayOneWind + " MPH Wind");
     //setting weather icon looks like this
     if (dayOne.weather[0].main == "Rain") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/rain.png");
     } else if (dayOne.weather[0].main == "Clear") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/clear.png");
     } else if (dayOne.weather[0].main == "Mist") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/mist.png");
     } else if (dayOne.weather[0].main == "Snow") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/snow.png");
     } else if (dayOne.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/clouds.png");
     }
     
     let dayTwo = data.list[9];
@@ -108,15 +108,15 @@ function defaultWeather(){
     $("#forecastWindTwo").text(dayTwoWind + " MPH Wind");
     
     if (dayTwo.weather[0].main == "Rain") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/rain.png");
     } else if (dayTwo.weather[0].main == "Clear") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/clear.png");
     } else if (dayTwo.weather[0].main == "Mist") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/mist.png");
     } else if (dayTwo.weather[0].main == "Snow") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/snow.png");
     } else if (dayTwo.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/clouds.png");
     }
     
     let dayThree = data.list[17];
@@ -131,15 +131,15 @@ function defaultWeather(){
     $("#forecastWindThree").text(dayThreeWind + " MPH Wind");
     
     if (dayThree.weather[0].main == "Rain") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/rain.png");
     } else if (dayThree.weather[0].main == "Clear") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/clear.png");
     } else if (dayThree.weather[0].main == "Mist") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/mist.png");
     } else if (dayThree.weather[0].main == "Snow") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/snow.png");
     } else if (dayThree.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/clouds.png");
     }
     
     let dayFour = data.list[25];
@@ -154,15 +154,15 @@ function defaultWeather(){
     $("#forecastWindFour").text(dayFourWind + " MPH Wind");
     
     if (dayFour.weather[0].main == "Rain") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/rain.png");
     } else if (dayFour.weather[0].main == "Clear") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/clear.png");
     } else if (dayFour.weather[0].main == "Mist") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/mist.png");
     } else if (dayFour.weather[0].main == "Snow") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/snow.png");
     } else if (dayFour.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/clouds.png");
     }
     
     let dayFive = data.list[33];
@@ -177,15 +177,15 @@ function defaultWeather(){
     $("#forecastWindFive").text(dayFiveWind + " MPH Wind");
     
     if (dayFive.weather[0].main == "Rain") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/rain.png");
     } else if (dayFive.weather[0].main == "Clear") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/clear.png");
     } else if (dayFive.weather[0].main == "Mist") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/mist.png");
     } else if (dayFive.weather[0].main == "Snow") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/snow.png");
     } else if (dayFive.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/clouds.png");
     }
 
 })
@@ -242,15 +242,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     $(".Humidity").text(cityHumidity+"%");
 
     if(data.weather[0].main == "Rain"){
-        $("#bigcard").attr("src", "/develop/images/rain.png")
+        $("#bigcard").attr("src", "./develop/images/rain.png")
     } else if (data.weather[0].main == "Clear"){
-        $("#bigcard").attr("src", "/develop/images/clear.png")
+        $("#bigcard").attr("src", "./develop/images/clear.png")
     } else if (data.weather[0].main == "Mist"){
-        $("#bigcard").attr("src", "/develop/images/mist.png")
+        $("#bigcard").attr("src", "./develop/images/mist.png")
     } else if (data.weather[0].main == "Snow"){
-        $("#bigcard").attr("src", "/develop/images/snow.png")
+        $("#bigcard").attr("src", "./develop/images/snow.png")
     } else if (data.weather[0].main == "Clouds"){
-        $("#bigcard").attr("src", "/develop/images/clouds.png")
+        $("#bigcard").attr("src", "./develop/images/clouds.png")
     } else{
         return;
     }
@@ -322,15 +322,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     $("#forecastWindOne").text(dayOneWind + " MPH Wind");
     
     if (dayOne.weather[0].main == "Rain") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/rain.png");
     } else if (dayOne.weather[0].main == "Clear") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/clear.png");
     } else if (dayOne.weather[0].main == "Mist") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/mist.png");
     } else if (dayOne.weather[0].main == "Snow") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/snow.png");
     } else if (dayOne.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/clouds.png");
     }
     
     let dayTwo = data.list[9];
@@ -345,15 +345,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     $("#forecastWindTwo").text(dayTwoWind + " MPH Wind");
     
     if (dayTwo.weather[0].main == "Rain") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/rain.png");
     } else if (dayTwo.weather[0].main == "Clear") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/clear.png");
     } else if (dayTwo.weather[0].main == "Mist") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/mist.png");
     } else if (dayTwo.weather[0].main == "Snow") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/snow.png");
     } else if (dayTwo.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/clouds.png");
     }
     
     let dayThree = data.list[17];
@@ -368,15 +368,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     $("#forecastWindThree").text(dayThreeWind + " MPH Wind");
     
     if (dayThree.weather[0].main == "Rain") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/rain.png");
     } else if (dayThree.weather[0].main == "Clear") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/clear.png");
     } else if (dayThree.weather[0].main == "Mist") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/mist.png");
     } else if (dayThree.weather[0].main == "Snow") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/snow.png");
     } else if (dayThree.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/clouds.png");
     }
     
     let dayFour = data.list[25];
@@ -391,15 +391,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     $("#forecastWindFour").text(dayFourWind + " MPH Wind");
     
     if (dayFour.weather[0].main == "Rain") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/rain.png");
     } else if (dayFour.weather[0].main == "Clear") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/clear.png");
     } else if (dayFour.weather[0].main == "Mist") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/mist.png");
     } else if (dayFour.weather[0].main == "Snow") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/snow.png");
     } else if (dayFour.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/clouds.png");
     }
     
     let dayFive = data.list[33];
@@ -414,15 +414,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"
     $("#forecastWindFive").text(dayFiveWind + " MPH Wind");
     
     if (dayFive.weather[0].main == "Rain") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/rain.png");
     } else if (dayFive.weather[0].main == "Clear") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/clear.png");
     } else if (dayFive.weather[0].main == "Mist") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/mist.png");
     } else if (dayFive.weather[0].main == "Snow") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/snow.png");
     } else if (dayFive.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/clouds.png");
     }
 })
 });    
@@ -492,15 +492,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     $(".Humidity").text(cityHumidity+"%");
 
     if(data.weather[0].main == "Rain"){
-        $("#bigcard").attr("src", "/develop/images/rain.png")
+        $("#bigcard").attr("src", "./develop/images/rain.png")
     } else if (data.weather[0].main == "Clear"){
-        $("#bigcard").attr("src", "/develop/images/clear.png")
+        $("#bigcard").attr("src", "./develop/images/clear.png")
     } else if (data.weather[0].main == "Mist"){
-        $("#bigcard").attr("src", "/develop/images/mist.png")
+        $("#bigcard").attr("src", "./develop/images/mist.png")
     } else if (data.weather[0].main == "Snow"){
-        $("#bigcard").attr("src", "/develop/images/snow.png")
+        $("#bigcard").attr("src", "./develop/images/snow.png")
     } else if (data.weather[0].main == "Clouds"){
-        $("#bigcard").attr("src", "/develop/images/clouds.png")
+        $("#bigcard").attr("src", "./develop/images/clouds.png")
     } else{
         return;
     }
@@ -527,15 +527,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     $("#forecastWindOne").text(dayOneWind + " MPH Wind");
     
     if (dayOne.weather[0].main == "Rain") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/rain.png");
     } else if (dayOne.weather[0].main == "Clear") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/clear.png");
     } else if (dayOne.weather[0].main == "Mist") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/mist.png");
     } else if (dayOne.weather[0].main == "Snow") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/snow.png");
     } else if (dayOne.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconOne").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconOne").attr("src", "./develop/images/clouds.png");
     }
     
     let dayTwo = data.list[9];
@@ -550,15 +550,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     $("#forecastWindTwo").text(dayTwoWind + " MPH Wind");
     
     if (dayTwo.weather[0].main == "Rain") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/rain.png");
     } else if (dayTwo.weather[0].main == "Clear") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/clear.png");
     } else if (dayTwo.weather[0].main == "Mist") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/mist.png");
     } else if (dayTwo.weather[0].main == "Snow") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/snow.png");
     } else if (dayTwo.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconTwo").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconTwo").attr("src", "./develop/images/clouds.png");
     }
     
     let dayThree = data.list[17];
@@ -573,15 +573,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     $("#forecastWindThree").text(dayThreeWind + " MPH Wind");
     
     if (dayThree.weather[0].main == "Rain") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/rain.png");
     } else if (dayThree.weather[0].main == "Clear") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/clear.png");
     } else if (dayThree.weather[0].main == "Mist") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/mist.png");
     } else if (dayThree.weather[0].main == "Snow") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/snow.png");
     } else if (dayThree.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconThree").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconThree").attr("src", "./develop/images/clouds.png");
     }
     
     let dayFour = data.list[25];
@@ -596,15 +596,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     $("#forecastWindFour").text(dayFourWind + " MPH Wind");
     
     if (dayFour.weather[0].main == "Rain") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/rain.png");
     } else if (dayFour.weather[0].main == "Clear") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/clear.png");
     } else if (dayFour.weather[0].main == "Mist") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/mist.png");
     } else if (dayFour.weather[0].main == "Snow") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/snow.png");
     } else if (dayFour.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconFour").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconFour").attr("src", "./develop/images/clouds.png");
     }
     
     let dayFive = data.list[33];
@@ -619,15 +619,15 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
     $("#forecastWindFive").text(dayFiveWind + " MPH Wind");
     
     if (dayFive.weather[0].main == "Rain") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/rain.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/rain.png");
     } else if (dayFive.weather[0].main == "Clear") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/clear.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/clear.png");
     } else if (dayFive.weather[0].main == "Mist") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/mist.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/mist.png");
     } else if (dayFive.weather[0].main == "Snow") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/snow.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/snow.png");
     } else if (dayFive.weather[0].main == "Clouds") {
-      $("#forecastWeatherIconFive").attr("src", "/develop/images/clouds.png");
+      $("#forecastWeatherIconFive").attr("src", "./develop/images/clouds.png");
     }
 })
 });    
@@ -636,7 +636,7 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
 }
 
 
-document.addEventListener("load",function(){
+window.addEventListener("load",function(){
   // Call the defaultWeather function to display default weather
     defaultWeather();
     // Call the buttons that are in storage
