@@ -7,6 +7,7 @@ This is my README.md file for my project.
 In this project, we aim to create a web application that provides weather information based on user input. The application will use an API to fetch weather data and display it to the user.
 
 ### Link To Website
+![image](https://github.com/WillZealot/weatherapp/assets/127908016/eb82c036-0974-44ec-8c78-92e4ea3b351f)
 
 
 
