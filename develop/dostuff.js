@@ -208,7 +208,7 @@ searchBtn.addEventListener("click", function(){
     
 
 //geocoding the lat and long to just simplify it down///////////////////////////////////////////////////////
-let cityNameLINK = "https://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"&limit=1&appid="+ APIKey+"&units=imperial";
+let cityNameLINK =   "https://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"&limit=1&appid="+ APIKey+"&units=imperial";
 
     fetch(cityNameLINK)
 .then(function(response){
@@ -458,7 +458,7 @@ function displayButtonCity() {
     
 
 //geocoding the name on the button
-let cityNameUrl = "https://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"&limit=1&appid="+ APIKey+"&units=imperial";
+let cityNameUrl =   "https://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"&limit=1&appid="+ APIKey+"&units=imperial";
 
     fetch(cityNameUrl)
 .then(function(response){
