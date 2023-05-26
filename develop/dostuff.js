@@ -208,9 +208,9 @@ searchBtn.addEventListener("click", function(){
     
 
 //geocoding the lat and long to just simplify it down///////////////////////////////////////////////////////
-let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"&limit=1&appid="+ APIKey+"&units=imperial";
+let cityNameLINK = "http://api.openweathermap.org/geo/1.0/direct?q="+ cityName +"&limit=1&appid="+ APIKey+"&units=imperial";
 
-    fetch(cityNameUrl)
+    fetch(cityNameLINK)
 .then(function(response){
     return response.json();
 })
