@@ -636,7 +636,7 @@ let cityNameUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ CityName +"
 }
 
 
-window.addEventListener("load",function(){
+document.addEventListener("load",function(){
   // Call the defaultWeather function to display default weather
     defaultWeather();
     // Call the buttons that are in storage
