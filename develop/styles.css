@@ -214,6 +214,19 @@ body{
     text-decoration: underline;
 }
 
+.city-buttons{
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 700;
+    margin-top: 25px;
+    color:white;
+    background-color: #222;
+    display: block;
+    width: 225px;
+    height: 50px;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 965px) {
     .mainstage{
         display: block;
